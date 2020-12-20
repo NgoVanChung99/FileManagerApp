@@ -1,0 +1,173 @@
+<resources>
+
+    <string name="FTP_Server">FTP Server</string>
+    <string name="app_name">File Manager</string>
+    <string name="storage_statistics">Storage Statistics</string>
+    <string name="sort_by">Sort By</string>
+    <string name="view">View</string>
+    <string name="search">Search</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="sd_card">SD Card</string>
+    <string name="file_icon">File icon</string>
+    <string name="cut">Cut</string>
+    <string name="copy">Copy</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="ascending">Ascending</string>
+    <string name="date_modified">Date Modified</string>
+    <string name="refresh">Refresh</string>
+    <string name="descending">Descending</string>
+    <string name="please_select_the_order">Please Select The Order</string>
+    <string name="properties">Properties</string>
+    <string name="paste">Paste</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_mainFTP">MainActivityFTP</string>
+
+    <string name="ok">OK</string>
+    <string name="plese_enter_file_name">Please Enter File Name</string>
+    <string name="size">Size</string>
+    <string name="type">Type</string>
+    <string name="path">Path</string>
+    <string name="last_modified">Last Modified</string>
+    <string name="writable">Writable</string>
+    <string name="share">Share</string>
+    <string name="pictures">Pictures</string>
+    <string name="music">Music</string>
+    <string name="movies">Movies</string>
+    <string name="downloads">Downloads</string>
+    <string name="documents">Documents</string>
+    <string name="images">Images</string>
+    <string name="audio">Audio</string>
+    <string name="docs">Docs</string>
+    <string name="fav">Favourites</string>
+    <string name="pin_to_favourites">Pin to Favourites</string>
+    <string name="remove">Remove</string>
+
+    <string name="swiftp_name">FTP Server</string>
+    <string name="swiftp_name_free">FTP Server </string>
+    <string name="swiftp_name_demo">FTP Server </string>
+    <string name="running_label">FTP Server</string>
+    <string name="running_summary_stopped">Toggle the state of the ftp server</string>
+    <string name="running_summary_started">Server run at %s</string>
+    <string name="running_summary_failed">
+        Failed to start the FTP server, not connected to the local network (wifi or ethernet)?
+    </string>
+    <string name="running_summary_failed_to_get_ip_address">
+        Failed to start the FTP server, unable to get IP address
+    </string>
+
+    <string name="market_version_label">Market version</string>
+    <string name="market_version_summary">ThankYou</string>
+    <string name="settings_label">Settings</string>
+    <string name="user_label">User</string>
+    <string name="login_settings_label">Login settings...</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="show_password_label">Display password</string>
+    <string name="username_validation_error">
+        The username must consist of 1 or more alphanumeric characters.
+        No other characters are allowed.
+    </string>
+    <string name="password_validation_error">
+        The password must consist of 1 or more alphanumeric characters.
+        No other characters are allowed.
+    </string>
+    <string name="allow_anonymous_label">Allow anonymous login</string>
+    <string name="anonymous_summary">Anonymous logins are only allowed read access</string>
+    <string name="advanced_settings_label">Advanced settings...</string>
+    <string name="port_number_label">Port Number</string>
+    <string name="port_validation_error">The port number must be in the range 1 to 65535.</string>
+    <string name="chroot_label">Stay in folder</string>
+    <string name="accept_wifi_label">Accept connection from wifi</string>
+    <string name="wakelock_label">Keep device awake (full CPU speed)</string>
+    <string name="writeExternalStorage_label">Writing external storage</string>
+    <string name="extra_label">Extra</string>
+    <string name="help_label">Help...</string>
+    <string name="about_label">About...</string>
+    <string name="help_dlg_title">FTP Server Help</string>
+    <!--string is too long to translate, when editing, split it in logical parts, see issue #105-->
+    <string name="help_dlg_message">ThankYou</string>
+
+    <string name="notification_server_starting">Starting at %s</string>
+    <string name="notification_title">FTP Server is running</string>
+    <string name="notification_text">Server run at %s</string>
+    <string name="notification_stop_text">Stop server</string>
+
+    <string name="nsd_servername_postfix">FTP Server</string>
+
+    <string name="select">Select</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="feedback">Send feedback</string>
+    <string name="about">About</string>
+
+    <string name="autoconnect_label">Autoconnect settings...</string>
+    <string name="autoconnect_summary">Select the wifi networks on which to autoconnect</string>
+    <string name="autoconnect_error_enable_wifi_for_access_points">
+        Enable wifi to get list of access points
+    </string>
+
+    <string name="demo_while_paid_dialog_title">
+        Demo started while paid version is installed
+    </string>
+    <string name="demo_while_paid_dialog_message">
+        thankyou
+    </string>
+
+    <string name="storage_warning">
+        Warning: storage is not available. You may want to unmount it.
+    </string>
+
+
+    <!-- auto added strings by AS -->
+    <string name="widget_name">FTP Server Widget</string>
+    <string name="notif_settings_text">Settings</string>
+    <string name="app_copyright">Copyrigh</string>
+    <string name="app_url" translatable="false">https://github.com/NgoVanChung99</string>
+    <string name="about_license_title">License</string>
+    <string name="about_license_name">GNU GPL3</string>
+    <string name="about_license_url" translatable="false">
+
+    </string>
+    <string name="about_description_title">Description</string>
+    <string name="about_description_text">
+
+    </string>
+    <string name="about_libraries_title">Libraries</string>
+    <string name="about_contributor_title">Contributors</string>
+    <string name="about_contributor_list" translatable="false">
+    </string>
+
+    <string name="app_theme">Theme...</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="mixed_theme">Mixed Theme</string>
+    <string name="unable_to_start_mail_client">Unable to start mail client to send feedback.</string>
+    <string name="use_english">Please use clear English!</string>
+
+    <!-- since 2.18 -->
+    <string name="request_coarse_location_dlg_title">Request permission for location</string>
+    <string name="request_coarse_location_dlg_message">
+
+    </string>
+
+    <!-- since 2.19 -->
+    <string name="unable_to_proceed_no_permissions">Unable to proceed without the needed permissions, shutting down</string>
+    <string name="manage_users_label">Manage users...</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="user_exists_error">Another user with same username already exists!</string>
+    <string name="confirm_delete_message">Delete user \'%1$s\'?</string>
+    <string name="notice_cant_read_write">Notice that we can\'t read/write in this folder.</string>
+    <string name="notice_cant_write">Notice that we can\'t write in this folder, reading will work. Writing in sub folders might work.</string>
+    <string name="manage_users_no_users">No users available, create a user.</string>
+    <string name="manage_users_multiple_users">Multiple users available, see list.</string>
+    <string name="gui_settings_label">Appearance...</string>
+    <string name="show_notification_icon_summary">Show the notification icon while the server is running</string>
+    <string name="show_notification_icon">Show notification icon</string>
+    <string name="auto_connect_stop_server_remove_from_list">
+        Stopping FTP Server while connected to a wifi network we automatically connected to. Removing this wifi network from the preferences
+    </string>
+    <string name="write_external_storage_old_android_version_summary">On these devices, all store is available using the file hierarchy.</string>
+
+</resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nvchung.filemanager_ftp_da3">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <application
+        android:name=".serverftp.App"
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/my_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/my_app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/my_theme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.nvchung.filemanager_ftp_da3"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/my_theme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nvchung.filemanager_ftp_da3.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".serverftp.gui.MainActivityFTP"
+            android:label="@string/title_activity_mainFTP"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/my_theme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nvchung.filemanager_ftp_da3.MainActivity" />
+        </activity>
+<!--        <activity-->
+<!--            android:name="com.nvchung.filemanager_ftp_da3.serverftp.gui.AboutActivity"-->
+<!--            android:parentActivityName="com.nvchung.filemanager_ftp_da3.serverftp.gui.MainActivityFTP"-->
+<!--            android:theme="@style/AppThemeDark" />-->
+
+        <activity
+            android:name="com.nvchung.filemanager_ftp_da3.serverftp.gui.ManageUsersActivity"
+            android:parentActivityName="com.nvchung.filemanager_ftp_da3.serverftp.gui.MainActivityFTP"
+            android:theme="@style/AppThemeDark" />
+
+        <service android:name="com.nvchung.filemanager_ftp_da3.serverftp.FsService" />
+
+        <service android:name="com.nvchung.filemanager_ftp_da3.serverftp.NsdService" />
+
+        <service android:name="com.nvchung.filemanager_ftp_da3.serverftp.App$AutoConnect$BackgroundService" />
+
+        <service android:name="com.nvchung.filemanager_ftp_da3.serverftp.App$AutoConnect$StartServerService" />
+        <service android:name="com.nvchung.filemanager_ftp_da3.serverftp.App$AutoConnect$StopServerService" />
+
+        <receiver
+            android:name="com.nvchung.filemanager_ftp_da3.serverftp.gui.FsWidgetProvider"
+            android:exported="false"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/swiftp_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.nvchung.filemanager_ftp_da3.serverftp.FTPSERVER_STARTED" />
+                <action android:name="com.nvchung.filemanager_ftp_da3.serverftp.FTPSERVER_STOPPED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <service android:name="com.nvchung.filemanager_ftp_da3.serverftp.gui.FsWidgetProvider$UpdateService" />
+
+        <!-- Tasker/Locale integration -->
+        <activity
+            android:name="com.nvchung.filemanager_ftp_da3.serverftp.locale.EditActivity"
+            android:exported="true"
+            android:icon="@drawable/widget_on"
+            android:label="@string/swiftp_name"
+            android:theme="@style/AppThemeDark"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:windowSoftInputMode="adjustResize">
+            <!-- this Intent filter allows the plug-in to be discovered by the host. -->
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.nvchung.filemanager_ftp_da3.serverftp.locale.FireReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.nvchung.filemanager_ftp_da3.serverftp.gui.FsTileService"
+            android:icon="@mipmap/ic_qs_ftp_server"
+            android:label="@string/swiftp_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+
+        </service>
+    </application>
+
+</manifest>
